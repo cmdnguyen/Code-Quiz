@@ -8,7 +8,7 @@ function startGame() {
     currentIndex = 0
 
     var gameInterval = setInterval(function() {
-        timerSpan.textContext = timeLeft;
+        timerSpan.textContent = timeLeft;
         timeLeft--;
         if (timeLeft === 0){
             clearInterval(gameInterval);
