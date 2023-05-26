@@ -1,25 +1,25 @@
-# <Code Quiz>
+# Code-Quiz
 
 ## Description
 
-Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
+This is a simple quiz using JavaScript. It uses HTML and CSS, but most of the elements are created through JavaScript. It was definitely a challenging task considering I am a beginner. 
+Despite the amount of hair-pulling moments over why my questions are not advancing, I definitely learned to always check the spelling of the code and check the scopes of my functions for variables within.
 
-- What was your motivation?
-- Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
-- What problem does it solve?
-- What did you learn?
 
 ## Installation
 
-What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.
+Starter code was provided by Boot Camp instructor, Eli Montoya. 
 
 ## Usage
+When you open the page, the player be met with the title page that explains the game.
+Once you start the game, the timer starts counting down from 75 and the player see the first question with four possible answers.
+If the wrong answer is clicked, the player will lose 10 seconds from the timer and the question will stay until the correect answer is given.
+If the correct answer is clicked, the quiz moves on to the next question with the timer still counting down.
+If the player answers all the question or the timer runs out, the player will submit their initials to put in the high score and will see where they are compared to others.
 
-Provide instructions and examples for use. Include screenshots as needed.
-
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative file path, add it to your README using the following syntax:
-
-![alt text](assets/images/screenshot.png)
+![Opening Page](./Assets/images/Screenshot%202023-05-25%20205734.png)
+![Taking the Quiz](./Assets/images/Screenshot%202023-05-25%20205801.png)
+![Submitting High Scores](./Assets/images/Screenshot%202023-05-25%20205917.png)
 
 ## Credits
 
