@@ -22,47 +22,47 @@ var highScoreList = [
 
 var questionBank = [
     {
-        question: "My first question?",
-        answerA: "answer 1",
-        answerB: "answer 2",
-        answerC: "answer 3",
-        answerD: "answer 4", 
+        question: "Inside which HTML element do we put the JavaScript?",
+        answerA: "javascript",
+        answerB: "script",
+        answerC: "js",
+        answerD: "scripting", 
         correctAnswer: "answerB"
     },
 
     { 
-        question: "second question",
-        answerA: "answer 5",
-        answerB: "answer 6",
-        answerC: "answer 7",
-        answerD: "answer 8", 
-        correctAnswer: "answerD"
+        question: "How do you create a function in JavaScript?",
+        answerA: "myFunction()",
+        answerB: "function:myFunction",
+        answerC: "function myFunction()",
+        answerD: "function = myFunction()", 
+        correctAnswer: "answerC"
     },
     
     { 
-        question: "third question",
-        answerA: "answer 9",
-        answerB: "answer 10",
-        answerC: "answer 11",
-        answerD: "answer 12", 
+        question: "How do you write an IF statement in JavaScript?",
+        answerA: "if (i === 5)",
+        answerB: "if i = 5",
+        answerC: "if i = 5 then",
+        answerD: "if i == 5 then", 
         correctAnswer: "answerA"
     },
     
     {
-        question: "fourth question",
-        answerA: "answer 13",
-        answerB: "answer 14",
-        answerC: "answer 15",
-        answerD: "answer 16", 
+        question: "How can you add a comment in a JavaScript?",
+        answerA: "'This is a comment' ",
+        answerB: "--This is a comment--",
+        answerC: "*This is a comment",
+        answerD: "//This is a comment", 
         correctAnswer: "answerD"
     },
     
     {
-        question: "fifth question",
-        answerA: "answer 17",
-        answerB: "answer 18",
-        answerC: "answer 19",
-        answerD: "answer 20", 
+        question: "What is the correct way to write a JavaScript array?",
+        answerA: "var colors = ['red', 'green', 'blue']",
+        answerB: "var colors = 'red', 'green', 'blue'",
+        answerC: "var colors = (1:'red', 2:'green', 3:'blue')",
+        answerD: "var colors = 1 = ('red'), 2 = ('green'), 3 = ('blue')", 
         correctAnswer: "answerA" 
     }]
 
@@ -90,7 +90,7 @@ function startGame() {
 
 function endGame() {
     gameContainer.style.display = "none";
-    scoreContainer.style.display = "inline";
+    scoreContainer.style.display = "flex";
     userScore.innerHTML = timeLeft;
    clearInterval(gameInterval)
 }
