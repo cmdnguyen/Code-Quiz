@@ -106,10 +106,7 @@ submitHighScore.addEventListener("click", function(){
 
 function showQuestion (){
     if (currentIndex < questionBank.length){
-
     currentQuestion = questionBank[currentIndex];
-    console.log('SHOWING THE QUESTION!')
-    console.log(currentQuestion.question)
     questionElement.innerHTML = currentQuestion.question;
     answerA.innerHTML = currentQuestion.answerA
     answerB.innerHTML = currentQuestion.answerB
@@ -121,12 +118,9 @@ function showQuestion (){
 
 function checkAnswer(answer){
     if (currentQuestion.correctAnswer === answer) {
-        console.log ("Correct!");
         currentIndex++;
         showQuestion();
     } else {
-        console.log(answer)
-        console.log("Wrong!");
         timeLeft -= 10;
     }}
 
