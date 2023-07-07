@@ -5,10 +5,12 @@
 This is a simple quiz using JavaScript. It uses HTML and CSS, but most of the elements are created through JavaScript. It was definitely a challenging task considering I am a beginner. 
 Despite the amount of hair-pulling moments over why my questions are not advancing, I definitely learned to always check the spelling of the code and check the scopes of my functions for variables within.
 
+You can try it here: https://cmdnguyen.github.io/Code-Quiz/
+
 
 ## Installation
 
-Starter code was provided by Boot Camp instructor, Eli Montoya. 
+N/A 
 
 ## Usage
 When you open the page, the player be met with the title page that explains the game.
