@@ -9,6 +9,12 @@ Despite the amount of hair-pulling moments over why my questions are not advanci
 
 You can try it here: https://cmdnguyen.github.io/Code-Quiz/
 
+## Table of Contents
+
+- [Installation](#installation)
+- [Usage](#usage)
+- [Credits](#credits)
+- [License](#license)
 
 ## Installation
 
