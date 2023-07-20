@@ -1,3 +1,4 @@
+//Declare variables from the HTML elements
 var startButton = document.getElementById("start-button");
 var timerSpan = document.getElementById("time-left");
 var questionElement = document.getElementById("question");
@@ -14,6 +15,7 @@ var displayHighScore = document.getElementById ("displayHighScore");
 var submitHighScore = document.getElementById("submitHighScore");
 var userName = document.getElementById("highScoreName")
 
+//Placeholder for high scores
 var highScoreList = [
     {name:"LS", score: 50}, 
     {name:"TT",score : 45}, 
@@ -66,35 +68,46 @@ var questionBank = [
         correctAnswer: "answerA" 
     }]
 
+//Timer
 var timeLeft = 75;
-var currentIndex =0;
-var currentQuestion;
 var gameInterval;
+//Index to determine which question to pull up
+var currentIndex = 0;
+var currentQuestion;
 
+//Function to start the game at the index of 0 and start the timer from 75 seconds
 function startGame() {
     currentIndex = 0
 
     gameInterval = setInterval(function() {
+        //Timer counts down
         timeLeft--;
         timerSpan.textContent = timeLeft;
+
+        //if time runs out, the game ends and clears the game interval
         if (!timeLeft){
             clearInterval(gameInterval);
             endGame();
         }
     }, 1000);
 
+    //Hides the start section of the page and shows the game when it starts
     startGameContainer.style.display = "none"
     gameContainer.style.display = "block";
     showQuestion()
 }
 
+//Function when the game ends
 function endGame() {
+    //Hides the game and shows the score
     gameContainer.style.display = "none";
     scoreContainer.style.display = "flex";
+    //Uses the time left as the user's score
     userScore.innerHTML = timeLeft;
    clearInterval(gameInterval)
 }
 
+//Event listeners for before, during and after the game
 startButton.addEventListener("click", startGame);
 answersContainer.addEventListener("click",function(event){checkAnswer(event.target.id)})
 submitHighScore.addEventListener("click", function(){
@@ -104,6 +117,7 @@ submitHighScore.addEventListener("click", function(){
 
 })
 
+//Displays the questions based on the index
 function showQuestion (){
     if (currentIndex < questionBank.length){
     currentQuestion = questionBank[currentIndex];
@@ -113,9 +127,11 @@ function showQuestion (){
     answerC.innerHTML = currentQuestion.answerC
     answerD.innerHTML = currentQuestion.answerD
     } else {
+        //If there's no questions left, end the game
         endGame()
     }}
 
+//Function to check for the correct answer. If wrong, takes out 10 seconds from the timer
 function checkAnswer(answer){
     if (currentQuestion.correctAnswer === answer) {
         currentIndex++;
@@ -124,6 +140,7 @@ function checkAnswer(answer){
         timeLeft -= 10;
     }}
 
+//Shows the high score board and adds user input to it
 function showHighScore(){
     highScoreList = JSON.parse(localStorage.getItem("highScoreList"))
     
